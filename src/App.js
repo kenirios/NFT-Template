@@ -222,6 +222,7 @@ const poderUpLip = async (_account, _id) => {
 
   // Visualización del Videojuego NFT 
   return (
+    <div class="container-fluid">
     <s.Screen image={_color}>
       {blockchain.account === "" || blockchain.lipToken === null ? (
         <s.Container flex = {1} ai = {"center"} jc = {"center"}>
@@ -273,9 +274,6 @@ const poderUpLip = async (_account, _id) => {
            }} > 
           Crear Nuevo Pack de 5 NFT 
            </s.Button2>
-          
-
-
 
           <s.Container jc = {"center"} fd = {"row"} style = {{flexWrap: "wrap"}} >
             {data.allLips.map((item, index) => {
@@ -283,21 +281,22 @@ const poderUpLip = async (_account, _id) => {
               return ( 
                
                 <s.Container key = {index} style = {{padding: "15px"}} >
+                  <div className="card">
                   <LipRenderer lip = {item} />
+                  </div>
                   <s.SpacerXSmall/>
-                  <s.Container>               
-                  <s.TextDescription>{item.name}</s.TextDescription>                                                      
-                    <s.TextDescription>Id: {item.id}</s.TextDescription>                      
-                    <s.TextDescription>Vida: {item.vida}</s.TextDescription>                
-                    <s.TextDescription>Nivel: {item.level}</s.TextDescription>
-                    <s.TextDescription>Fuerza: {item.fuerza}</s.TextDescription>                    
-                    <s.TextDescription>Rareza: {item.rarity}</s.TextDescription>                    
-                    <s.TextDescription>Defenza: {item.defenza}</s.TextDescription>
-                    <s.TextDescription>Habilidad: {item.habil}</s.TextDescription>                                      
-                    <s.TextDescription>Poder de Pelea: {item.poder}</s.TextDescription>
-                    <s.TextDescription>ADN: {item.dna}</s.TextDescription>                            
-                    <s.SpacerXSmall/>
+                  <div className="card">    
 
+                      <div>{item.name}</div>                                                      
+                      <div>Id: {item.id}</div>                      
+                      <div>Vida: {item.vida}</div>                
+                    <div>Nivel: {item.level}</div>
+                    <div>Fuerza: {item.fuerza}</div>                    
+                    <div>Rareza: {item.rarity}</div>                    
+                    <div>Defenza: {item.defenza}</div>
+                    <div>Habilidad: {item.habil}</div>                                      
+                    <div>Poder de Pelea: {item.poder}</div>
+                    <div>ADN: {item.dna}</div>                            
                     <s.Button3
                     disabled = {loading ? 1:0}
                     onClick = {(e) => {
@@ -353,7 +352,7 @@ const poderUpLip = async (_account, _id) => {
                       10 P Pelea
                     </s.Button3>
 
-                  </s.Container>
+                  </div>
                   </s.Container>
               );
             })}
@@ -377,6 +376,7 @@ const poderUpLip = async (_account, _id) => {
             </s.Container>
         )}
     </s.Screen> 
+    </div>
   );
 }
 

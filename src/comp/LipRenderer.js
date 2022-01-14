@@ -10,7 +10,7 @@ const LipRenderer = ({lip = null, size = 200, style}) => {
     }
     let rarity = _r1;
 
-    if(lip.rarity >= 60) {
+    if(lip.rarity >= 80) {
         rarity = _r2;
     }
 
