@@ -8,10 +8,12 @@ import store from "./redux/store";
 import {Provider} from "react-redux";
 import "./styles/reset.css";
 import "./styles/theme.css";
+import Dashboard from './comp/Dashboard';
 
 ReactDOM.render(
   <Provider store={store}>
     <NavMenu/>
+    <Dashboard/>
     <App />
   </Provider>,
   document.getElementById('root')

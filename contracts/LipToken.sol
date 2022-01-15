@@ -70,7 +70,7 @@ contract LipToken is ERC721, Ownable {
          uint256  vida = block.timestamp/100000000;   
 
 
-        for (uint256 i = 0; i <= cant; i++){               
+        for (uint256 i = 1; i <= cant; i++){               
             vida = vida*7;
             randDna = randDna *35;
             randRarity = randRarity*3;
