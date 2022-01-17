@@ -102,7 +102,7 @@ contract LipToken is ERC721, Ownable {
     
     
     // Creación de un labio aleatorio
-    function createRandomLip(string memory _name, uint _cant, uint[]) public payable {
+    function createRandomLip(string memory _name, uint _cant) public payable {
         require(msg.value >= fee);     
         _createLip(_name, _cant);        
     }
